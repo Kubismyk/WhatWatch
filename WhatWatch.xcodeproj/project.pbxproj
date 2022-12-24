@@ -14,6 +14,10 @@
 		583AF388295505BB0051BAEC /* WhatWatch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 583AF386295505BB0051BAEC /* WhatWatch.xcdatamodeld */; };
 		583AF38A295505BD0051BAEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 583AF389295505BD0051BAEC /* Assets.xcassets */; };
 		583AF38D295505BD0051BAEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 583AF38B295505BD0051BAEC /* LaunchScreen.storyboard */; };
+		583AF39C29550B660051BAEC /* SideMenu in Frameworks */ = {isa = PBXBuildFile; productRef = 583AF39B29550B660051BAEC /* SideMenu */; };
+		58C9C5FD29564DD300733184 /* Oswald.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 58C9C5FC29564DD300733184 /* Oswald.ttf */; };
+		58C9C5FF29567AE800733184 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C9C5FE29567AE800733184 /* ModalViewController.swift */; };
+		58C9C60129567C4A00733184 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C9C60029567C4A00733184 /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,9 @@
 		583AF389295505BD0051BAEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		583AF38C295505BD0051BAEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		583AF38E295505BD0051BAEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58C9C5FC29564DD300733184 /* Oswald.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Oswald.ttf; sourceTree = "<group>"; };
+		58C9C5FE29567AE800733184 /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
+		58C9C60029567C4A00733184 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				583AF39C29550B660051BAEC /* SideMenu in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,16 +66,75 @@
 		583AF37C295505BB0051BAEC /* WhatWatch */ = {
 			isa = PBXGroup;
 			children = (
-				583AF37D295505BB0051BAEC /* AppDelegate.swift */,
-				583AF37F295505BB0051BAEC /* SceneDelegate.swift */,
-				583AF381295505BB0051BAEC /* ViewController.swift */,
-				583AF383295505BB0051BAEC /* Main.storyboard */,
-				583AF389295505BD0051BAEC /* Assets.xcassets */,
-				583AF38B295505BD0051BAEC /* LaunchScreen.storyboard */,
+				583AF398295508610051BAEC /* Resources */,
+				583AF3972955085C0051BAEC /* Controllers */,
+				583AF396295508530051BAEC /* Models */,
+				583AF3952955084D0051BAEC /* ViewModels */,
+				583AF394295508360051BAEC /* Views */,
 				583AF38E295505BD0051BAEC /* Info.plist */,
 				583AF386295505BB0051BAEC /* WhatWatch.xcdatamodeld */,
 			);
 			path = WhatWatch;
+			sourceTree = "<group>";
+		};
+		583AF394295508360051BAEC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				583AF389295505BD0051BAEC /* Assets.xcassets */,
+				583AF399295508A10051BAEC /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		583AF3952955084D0051BAEC /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		583AF396295508530051BAEC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		583AF3972955085C0051BAEC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				583AF381295505BB0051BAEC /* ViewController.swift */,
+				58C9C5FE29567AE800733184 /* ModalViewController.swift */,
+				58C9C60029567C4A00733184 /* MenuViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		583AF398295508610051BAEC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				58C9C5FB29564DB600733184 /* Fonts */,
+				583AF37D295505BB0051BAEC /* AppDelegate.swift */,
+				583AF37F295505BB0051BAEC /* SceneDelegate.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		583AF399295508A10051BAEC /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				583AF383295505BB0051BAEC /* Main.storyboard */,
+				583AF38B295505BD0051BAEC /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		58C9C5FB29564DB600733184 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				58C9C5FC29564DD300733184 /* Oswald.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +153,9 @@
 			dependencies = (
 			);
 			name = WhatWatch;
+			packageProductDependencies = (
+				583AF39B29550B660051BAEC /* SideMenu */,
+			);
 			productName = WhatWatch;
 			productReference = 583AF37A295505BB0051BAEC /* WhatWatch.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +184,9 @@
 				Base,
 			);
 			mainGroup = 583AF371295505BA0051BAEC;
+			packageReferences = (
+				583AF39A29550B660051BAEC /* XCRemoteSwiftPackageReference "SideMenu" */,
+			);
 			productRefGroup = 583AF37B295505BB0051BAEC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -129,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				583AF38D295505BD0051BAEC /* LaunchScreen.storyboard in Resources */,
+				58C9C5FD29564DD300733184 /* Oswald.ttf in Resources */,
 				583AF38A295505BD0051BAEC /* Assets.xcassets in Resources */,
 				583AF385295505BB0051BAEC /* Main.storyboard in Resources */,
 			);
@@ -142,6 +216,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				583AF382295505BB0051BAEC /* ViewController.swift in Sources */,
+				58C9C60129567C4A00733184 /* MenuViewController.swift in Sources */,
+				58C9C5FF29567AE800733184 /* ModalViewController.swift in Sources */,
 				583AF388295505BB0051BAEC /* WhatWatch.xcdatamodeld in Sources */,
 				583AF37E295505BB0051BAEC /* AppDelegate.swift in Sources */,
 				583AF380295505BB0051BAEC /* SceneDelegate.swift in Sources */,
@@ -362,6 +438,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		583AF39A29550B660051BAEC /* XCRemoteSwiftPackageReference "SideMenu" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jonkykong/SideMenu.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		583AF39B29550B660051BAEC /* SideMenu */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 583AF39A29550B660051BAEC /* XCRemoteSwiftPackageReference "SideMenu" */;
+			productName = SideMenu;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		583AF386295505BB0051BAEC /* WhatWatch.xcdatamodeld */ = {
