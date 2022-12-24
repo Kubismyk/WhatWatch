@@ -13,29 +13,40 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController!.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white,NSAttributedString.Key.font: UIFont(name: "Oswald", size: 20)!]
-        presentModal()
+        testModal()
     }
 
+//
+//    private func presentModal() {
+//        let ModalViewController = ModalViewController()
+//        let nav = UINavigationController(rootViewController: ModalViewController)
+//        nav.isModalInPresentation = true
+//        nav.modalPresentationStyle = .pageSheet
+//        if let sheet = nav.sheetPresentationController {
+//
+//            // 3
+//            sheet.detents = [.medium(), .large()]
+//            sheet.prefersGrabberVisible = true
+//            sheet.preferredCornerRadius = 35
+//
+//        }
+//        // 4
+//        present(nav, animated: true, completion: nil)
+//
+//    }
     
-    private func presentModal() {
-        let ModalViewController = ModalViewController()
-        let nav = UINavigationController(rootViewController: ModalViewController)
-        nav.isModalInPresentation = true
-        nav.modalPresentationStyle = .pageSheet
+    private func testModal(){
+        let backDropActionSheet = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "BackDrop") as! ModalViewController
         
-        
-        // 2
-        if let sheet = nav.sheetPresentationController {
-
-            // 3
+        if let sheet = backDropActionSheet.sheetPresentationController {
             sheet.detents = [.medium(), .large()]
-            sheet.prefersGrabberVisible = true
             sheet.preferredCornerRadius = 35
-            
-        }
-        // 4
-        present(nav, animated: true, completion: nil)
-
+            sheet.prefersScrollingExpandsWhenScrolledToEdge = true
+            sheet.prefersGrabberVisible = true
+        } // backdrop styling and stuff
+        
+        
+        self.present(backDropActionSheet,animated: true,completion: nil)
     }
 
 }

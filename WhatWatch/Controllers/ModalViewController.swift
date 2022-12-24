@@ -12,14 +12,9 @@ class ModalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .red
         //self.dismiss(animated: true)
     }
     
-
-    @IBAction func generateNewMovieButton(_ sender: UIButton) {
-        self.dismiss(animated: true)
-    }
     
 
 }
