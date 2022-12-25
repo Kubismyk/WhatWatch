@@ -54,7 +54,7 @@ class MenuViewController: UIViewController {
             // Use the JSONDecoder class to parse the response data into a MovieSearch object
             let decoder = JSONDecoder()
             do {
-                let movieSearch = try decoder.decode(MovieSearch.self, from: data)
+                let movieSearch = try decoder.decode(Welcome.self, from: data)
 
                 // Select a random movie from the search results
                 let randomIndex = Int.random(in: 0..<movieSearch.search.count)
@@ -70,30 +70,31 @@ class MenuViewController: UIViewController {
 }
 
 
-struct MovieSearch: Decodable {
-    let search: [Movie]
-    let totalResults: String
-    let response: String
+struct Welcome: Codable {
+    let search: [Search]
+    let totalResults, response: String
 
     enum CodingKeys: String, CodingKey {
-        case search
-        case totalResults = "totalResults"
-        case response
+        case search = "Search"
+        case totalResults
+        case response = "Response"
     }
 }
 
-struct Movie: Decodable {
-    let title: String
-    let year: String
-    let imdbID: String
-    let type: String
+struct Search: Codable {
+    let title, year, imdbID: String
+    let type: TypeEnum
     let poster: String
 
     enum CodingKeys: String, CodingKey {
-        case title
+        case title = "Title"
         case year = "Year"
-        case imdbID = "imdbID"
+        case imdbID
         case type = "Type"
         case poster = "Poster"
     }
+}
+
+enum TypeEnum: String, Codable {
+    case movie = "movie"
 }

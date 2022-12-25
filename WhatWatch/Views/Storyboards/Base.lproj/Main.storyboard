@@ -91,6 +91,23 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="H4V-nv-JUN">
+                                        <rect key="frame" x="20" y="181" width="374" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IMDB Rating :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7y-i9-42i">
+                                                <rect key="frame" x="0.0" y="0.0" width="187" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IMDB Rating :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hc4-S7-Nbq">
+                                                <rect key="frame" x="187" y="0.0" width="187" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J2P-wW-FLW">
                                         <rect key="frame" x="20" y="160" width="374" height="1"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -98,17 +115,40 @@
                                             <constraint firstAttribute="height" constant="1" id="ZHa-XK-8R3"/>
                                         </constraints>
                                     </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="aqV-aV-IeN">
+                                        <rect key="frame" x="20" y="211.5" width="374" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZBm-Hd-z40">
+                                                <rect key="frame" x="0.0" y="0.0" width="156.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IMDB Rating :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRS-Je-gT6">
+                                                <rect key="frame" x="217.5" y="0.0" width="156.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="J2P-wW-FLW" firstAttribute="top" secondItem="z3A-pZ-mxi" secondAttribute="bottom" constant="15" id="280-Ag-tnp"/>
                                     <constraint firstItem="z3A-pZ-mxi" firstAttribute="top" secondItem="q1k-e2-Zev" secondAttribute="top" constant="20" id="CU2-fK-Hlf"/>
                                     <constraint firstItem="PCY-xC-uvq" firstAttribute="height" secondItem="z3A-pZ-mxi" secondAttribute="height" multiplier="0.168" id="FSW-EY-G7a"/>
+                                    <constraint firstItem="H4V-nv-JUN" firstAttribute="leading" secondItem="q1k-e2-Zev" secondAttribute="leading" constant="20" id="I5e-pV-Lef"/>
+                                    <constraint firstItem="aqV-aV-IeN" firstAttribute="top" secondItem="H4V-nv-JUN" secondAttribute="bottom" constant="10" id="IYi-T6-l0Q"/>
+                                    <constraint firstItem="q1k-e2-Zev" firstAttribute="trailing" secondItem="aqV-aV-IeN" secondAttribute="trailing" constant="20" id="RO0-wX-kcQ"/>
                                     <constraint firstItem="z3A-pZ-mxi" firstAttribute="leading" secondItem="q1k-e2-Zev" secondAttribute="leading" constant="20" id="bT3-gw-Mng"/>
                                     <constraint firstItem="PCY-xC-uvq" firstAttribute="leading" secondItem="z3A-pZ-mxi" secondAttribute="trailing" constant="20" id="cp1-TC-wNc"/>
+                                    <constraint firstItem="q1k-e2-Zev" firstAttribute="trailing" secondItem="H4V-nv-JUN" secondAttribute="trailing" constant="20" id="jWq-xW-ghB"/>
                                     <constraint firstItem="J2P-wW-FLW" firstAttribute="leading" secondItem="q1k-e2-Zev" secondAttribute="leading" constant="20" id="jpZ-ak-itX"/>
                                     <constraint firstItem="q1k-e2-Zev" firstAttribute="trailing" secondItem="J2P-wW-FLW" secondAttribute="trailing" constant="20" id="pMv-XP-v5B"/>
                                     <constraint firstItem="q1k-e2-Zev" firstAttribute="trailing" secondItem="PCY-xC-uvq" secondAttribute="trailing" constant="20" id="u5R-LX-ENS"/>
+                                    <constraint firstItem="H4V-nv-JUN" firstAttribute="top" secondItem="J2P-wW-FLW" secondAttribute="bottom" constant="20" id="vzp-V7-dO6"/>
                                     <constraint firstItem="PCY-xC-uvq" firstAttribute="top" secondItem="q1k-e2-Zev" secondAttribute="top" constant="20" id="wdT-kE-r5F"/>
+                                    <constraint firstItem="aqV-aV-IeN" firstAttribute="leading" secondItem="q1k-e2-Zev" secondAttribute="leading" constant="20" id="yAp-cH-VXD"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="PfB-ny-kBL"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="q1k-e2-Zev"/>
@@ -117,6 +157,12 @@
                         <viewLayoutGuide key="safeArea" id="brI-sO-cKh"/>
                         <color key="backgroundColor" red="0.24705882352941178" green="0.25882352941176467" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="imdbRating" destination="hc4-S7-Nbq" id="AXZ-kY-4Mn"/>
+                        <outlet property="movieName" destination="PCY-xC-uvq" id="6aH-5N-l4h"/>
+                        <outlet property="moviePosterImage" destination="z3A-pZ-mxi" id="aSv-73-wjb"/>
+                        <outlet property="movieType" destination="DRS-Je-gT6" id="M7h-iD-5uY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uEV-DH-APZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

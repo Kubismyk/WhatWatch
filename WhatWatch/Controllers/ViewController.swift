@@ -16,24 +16,6 @@ class ViewController: UIViewController {
         testModal()
     }
 
-//
-//    private func presentModal() {
-//        let ModalViewController = ModalViewController()
-//        let nav = UINavigationController(rootViewController: ModalViewController)
-//        nav.isModalInPresentation = true
-//        nav.modalPresentationStyle = .pageSheet
-//        if let sheet = nav.sheetPresentationController {
-//
-//            // 3
-//            sheet.detents = [.medium(), .large()]
-//            sheet.prefersGrabberVisible = true
-//            sheet.preferredCornerRadius = 35
-//
-//        }
-//        // 4
-//        present(nav, animated: true, completion: nil)
-//
-//    }
     
     private func testModal(){
         let backDropActionSheet = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "BackDrop") as! ModalViewController
@@ -44,6 +26,8 @@ class ViewController: UIViewController {
             sheet.prefersScrollingExpandsWhenScrolledToEdge = true
             sheet.prefersGrabberVisible = true
         } // backdrop styling and stuff
+        
+        
         
         
         self.present(backDropActionSheet,animated: true,completion: nil)
