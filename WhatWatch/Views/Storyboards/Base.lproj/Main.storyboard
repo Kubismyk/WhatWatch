@@ -15,15 +15,6 @@
                     <view key="view" contentMode="scaleToFill" id="gkH-82-yyZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R6f-sL-nmQ">
-                                <rect key="frame" x="186" y="194" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Ma2-0R-04h"/>
                         <color key="backgroundColor" red="0.24705882352941178" green="0.25882352941176467" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -36,31 +27,47 @@
         <!--Generate Movie-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WhatWatch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="WhatWatch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YY7-2T-Mbz">
-                                <rect key="frame" x="0.0" y="90" width="414" height="652"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YY7-2T-Mbz">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GRS-n8-04g">
+                                <rect key="frame" x="20" y="612" width="374" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="G9U-Jq-wLT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.2627450980392157" green="0.25882352941176467" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YY7-2T-Mbz" secondAttribute="bottom" constant="120" id="33Q-sW-Jsu"/>
-                            <constraint firstItem="YY7-2T-Mbz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="2" id="5eS-c3-iWV"/>
+                            <constraint firstItem="GRS-n8-04g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="1ea-wc-NKZ"/>
+                            <constraint firstAttribute="bottom" secondItem="YY7-2T-Mbz" secondAttribute="bottom" id="33Q-sW-Jsu"/>
+                            <constraint firstItem="YY7-2T-Mbz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="5eS-c3-iWV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GRS-n8-04g" secondAttribute="bottom" constant="50" id="BHn-C2-FKN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GRS-n8-04g" secondAttribute="trailing" constant="20" id="Dsw-lD-5TV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YY7-2T-Mbz" secondAttribute="trailing" id="XFY-n3-qaE"/>
                             <constraint firstItem="YY7-2T-Mbz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gQQ-cW-X5Y"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Generate Movie" id="03s-HQ-4Fr">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="line.horizontal.3" catalog="system" id="hjX-BV-wdh">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="line.3.horizontal" catalog="system" id="hjX-BV-wdh">
                             <connections>
                                 <segue destination="eUh-Nx-wxN" kind="presentation" id="jLD-mq-Bn2"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="mainPoster" destination="YY7-2T-Mbz" id="Lah-1q-b3w"/>
+                        <outlet property="movieName" destination="GRS-n8-04g" id="kLL-Jw-xwg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -153,10 +160,27 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="PfB-ny-kBL"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="q1k-e2-Zev"/>
                             </scrollView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kGa-Dh-u3Q">
+                                <rect key="frame" x="0.0" y="-7" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.2470588235" green="0.25882352939999997" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.2470588235" green="0.25882352939999997" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title=" " id="Z9e-b4-iWP" userLabel="asd">
+                                        <barButtonItem key="rightBarButtonItem" title="Item" image="multiply.circle.fill" catalog="system" id="wsG-SX-lIf">
+                                            <color key="tintColor" systemColor="labelColor"/>
+                                            <connections>
+                                                <action selector="modalDismiss:" destination="Ndc-oD-15T" id="7rN-r7-Uct"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="brI-sO-cKh"/>
                         <color key="backgroundColor" red="0.24705882352941178" green="0.25882352941176467" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="O33-WV-ypO"/>
                     <connections>
                         <outlet property="imdbRating" destination="hc4-S7-Nbq" id="AXZ-kY-4Mn"/>
                         <outlet property="movieName" destination="PCY-xC-uvq" id="6aH-5N-l4h"/>
@@ -166,7 +190,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uEV-DH-APZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="937.68115942028987" y="801.5625"/>
+            <point key="canvasLocation" x="1847.826086956522" y="801.5625"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3GQ-jq-stF">
@@ -220,9 +244,36 @@
             </objects>
             <point key="canvasLocation" x="937.68115942028987" y="-613.39285714285711"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="h4J-g9-Aex">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="J0O-qj-9Wd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vMS-UE-3ix">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.2470588235" green="0.25882352939999997" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.2470588235" green="0.25882352939999997" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.2470588235" green="0.25882352939999997" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="W1X-MW-d4b">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="Ndc-oD-15T" kind="relationship" relationship="rootViewController" id="nzh-y9-kNp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8TZ-b7-KI0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="937.68115942028987" y="801.5625"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
+        <image name="line.3.horizontal" catalog="system" width="128" height="64"/>
+        <image name="multiply.circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

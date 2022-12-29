@@ -18,6 +18,7 @@
 		58C9C5FD29564DD300733184 /* Oswald.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 58C9C5FC29564DD300733184 /* Oswald.ttf */; };
 		58C9C5FF29567AE800733184 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C9C5FE29567AE800733184 /* ModalViewController.swift */; };
 		58C9C60129567C4A00733184 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C9C60029567C4A00733184 /* MenuViewController.swift */; };
+		58C9C604295C825800733184 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 58C9C603295C825800733184 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58C9C604295C825800733184 /* Kingfisher in Frameworks */,
 				583AF39C29550B660051BAEC /* SideMenu in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -155,6 +157,7 @@
 			name = WhatWatch;
 			packageProductDependencies = (
 				583AF39B29550B660051BAEC /* SideMenu */,
+				58C9C603295C825800733184 /* Kingfisher */,
 			);
 			productName = WhatWatch;
 			productReference = 583AF37A295505BB0051BAEC /* WhatWatch.app */;
@@ -186,6 +189,7 @@
 			mainGroup = 583AF371295505BA0051BAEC;
 			packageReferences = (
 				583AF39A29550B660051BAEC /* XCRemoteSwiftPackageReference "SideMenu" */,
+				58C9C602295C825800733184 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 583AF37B295505BB0051BAEC /* Products */;
 			projectDirPath = "";
@@ -448,6 +452,14 @@
 				kind = branch;
 			};
 		};
+		58C9C602295C825800733184 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -455,6 +467,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 583AF39A29550B660051BAEC /* XCRemoteSwiftPackageReference "SideMenu" */;
 			productName = SideMenu;
+		};
+		58C9C603295C825800733184 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 58C9C602295C825800733184 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 

@@ -18,11 +18,15 @@ class ModalViewController: UIViewController {
         super.viewDidLoad()
 
         //self.dismiss(animated: true)
+        
     }
     
     func config(data:Search){
         self.movieName.text = data.title
         self.imdbRating.text = data.year
+    }
+    @IBAction func modalDismiss(_ sender: Any) {
+        self.dismiss(animated: true)
     }
     
     
